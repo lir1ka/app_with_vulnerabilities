@@ -57,7 +57,7 @@ def register():
             conn.close()
             return redirect(url_for('register'))
         try:
-            conn.execute('INSERT INTO users (name, password) VALUES (?, ?)', (username, hashed_password))
+            conn.execute('INSERT INTO users (name, password) VALUES (?, ?)', (username, password))
             conn.commit()
         except sqlite3.IntegrityError:
             flash('An error occurred, please try again.', 'error')
