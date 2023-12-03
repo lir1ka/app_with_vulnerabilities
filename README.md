@@ -15,6 +15,7 @@ docker run -p 5000:5000 app_with_vulns
    ```javascript
    <script>alert()</script>
    ```
+   ![Alt text](images_for_readme/image.png)
 
 
 ### POC для IDOR
