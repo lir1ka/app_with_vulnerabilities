@@ -7,3 +7,5 @@
 ```bash
 docker build -t app_with_vulns .
 docker run -p 5000:5000 app_with_vulns
+```bash
+вфывфыв
