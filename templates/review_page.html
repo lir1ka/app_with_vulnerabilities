@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница отзывов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .review-form {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .review-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-form label {
+            margin-bottom: 5px;
+        }
+
+        .review-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .review-form button {
+            cursor: pointer;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .review-section {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .review-section h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Отзывы читателей</h1>
+            </header>
+
+            <div class="review-form">
+                <form action="/post_review" method="post">
+                    <label for="book-title">Название книги</label><br>
+                    <input type="text" id="book-title" name="book_title" required><br>
+
+                    <label for="review">Ваш отзыв:</label><br>
+                    <textarea id="review" name="review" rows="4" cols="50" required></textarea><br>
+                    <button type="submit">Оставить отзыв</button>
+                </form>
+            </div>
+
+            <div class="review-section">
+                <h2>Отзывы:</h2>
+                {% for review in reviews %}
+                <div class="review">
+                    <h3>{{ review['title'] }}</h3>
+                    <p>{{ review['review']|safe }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <img src="/static/images/site_icon.png" alt="site_icon" width="50" height="50">
+        </a>
+      </div>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-secondary">Главная</a></li>
+        <li><a href="#" class="nav-link px-2">О нас</a></li>
+        <li><a href="#" class="nav-link px-2">Это бесплатно?</a></li>
+        <li><a href="#" class="nav-link px-2">Наши возможности</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <a href="/login">
+            <button type="button" class="btn btn-outline-primary me-2">Войти</button>
+        </a>
+        <button type="button" class="btn btn-primary">Зарегистрироваться</button>
+      </div>
+    </header>
+  </div>
+  <main>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Some representative placeholder content for the second slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+  
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+  
+    <div class="container marketing">
+  
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" src="/static/images/Kiprensky_Pushkin.jpg" alt="Pushkin" width="140" height="140">
+          <h2 class="fw-normal">А.С. Пушкин</h2>
+          <p>
+            Откройте для себя мир Александра Пушкина, основоположника современного русского литературного языка, и исследуйте его вклад в развитие и стандартизацию русского языка. Пушкин знаменит своим уникальным стилем, сочетающим простоту и изящество, который делает его произведения живыми и эмоционально насыщенными. Его темы варьируются от любви и героизма до социальной справедливости, оставаясь актуальными и сегодня..</p>
+          <p><a class="btn btn-secondary" href="#">Погрузиться в мир читателей»</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/grin.jpg" alt="grin" width="140" height="140">
+          <h2 class="fw-normal">Джон Грин</h2>
+          <p>Откройте для себя творчество Джона Грина, современного американского автора, чьи произведения глубоко резонируют с подростковой аудиторией. Произведения Грина, включая такие бестселлеры, как "Виноваты звезды" и "Бумажные города", "В поисках Аляски" оказали значительное влияние на современную литературу и культуру, делая его одним из самых узнаваемых писателей современности.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/George_Orwell.jpg" alt="Orwell" width="140" height="140">
+          <h2 class="fw-normal">Джордж Оруэлл</h2>
+          <p>Откройте для себя произведения Джорджа Оруэлла, одного из самых влиятельных писателей 20-го века, чьи работы остаются актуальными и сегодня. Оруэлл известен своими острыми социально-политическими комментариями, насыщенными в его знаменитых романах, таких как "1984" и "Скотный двор". Произведения Оруэлла остаются фундаментальными для понимания современной политики и идеологии, предоставляя вечные уроки о важности свободы слова и критического мышления.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+  
+  
+      <!-- START THE FEATURETTES -->
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Почему читать важно? <span class="text-body-secondary">Ну правда важно.</span></h2>
+          <p class="lead">Чтение – это окно в мир знаний и воображения. Оно расширяет границы нашего сознания, обогащает словарный запас и улучшает память. Читая, мы погружаемся в разнообразные культуры и эпохи, изучаем новые идеи и обретаем вдохновение. Книги – это путеводитель в путешествии по миру мудрости и открытий</p>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/static/images/num1.jpg" alt="1" width="500" height="500">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Почему читать интересно? <span class="text-body-secondary">Да, существуют не только скучные книги.</span></h2>
+          <p class="lead">Читать реально интересно. Представь, что ты можешь уйти из реальности, забыть о всех своих проблемах и загонах. Очутиться там, где ты хочешь. Почувствовать то, что чувствуют герои. Стать тем, кем всегда хотел.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/static/images/2.jpg" alt="1" width="500" height="500">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Почему читать можно на нашем сайте? <span class="text-body-secondary">А может, и нужно.</span></h2>
+          <p class="lead">На нашем сайте чтение становится еще более увлекательным и доступным. Здесь ты найдешь широкий выбор книг на любой вкус: от классики до современных бестселлеров. Наш удобный интерфейс позволяет легко находить новинки и любимые произведения. Кроме того, мы предлагаем уникальные рекомендации, основанные на ваших предпочтениях, чтобы ты всегда мог открыть для себя что-то новое. Наш сайт — это не просто платформа для чтения, это сообщество единомышленников, где ты можешь делиться впечатлениями и обсуждать прочитанное. Присоединяйтесь к нам и погрузитесь в мир книг!</p>
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/static/images/rb.jpg" alt="1" width="500" height="500">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <!-- /END THE FEATURETTES -->
+  
+    </div><!-- /.container -->
+  
+  
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>© 2023–2023 417 development, Inc.</p>
+    </footer>
+  </main>
+</body>
+</html>
