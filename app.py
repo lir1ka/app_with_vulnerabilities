@@ -4,14 +4,13 @@ import subprocess
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 
-from config import UPLOAD_FOLDER, BACKUP_FOLDER, secret_key
+from config import UPLOAD_FOLDER, secret_key
 from databases_functions import get_db_connection_users, get_db_connection_books, get_db_connection_reviews
 
 app = Flask(__name__)
 
 app.secret_key = secret_key
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['BACKUP_FOLDER'] = BACKUP_FOLDER
 
 
 @app.route('/')
@@ -124,7 +123,7 @@ def upload_book():
             try:
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 filepath = os.path.join('uploads/', filename)
-                out = subprocess.check_output((f"convert -resize 99% {UPLOAD_FOLDER}{filename} {BACKUP_FOLDER}backup.jpg"), shell=True)
+                out = subprocess.check_output((f"convert -resize 99% {UPLOAD_FOLDER}{filename} {UPLOAD_FOLDER}backup.jpg"), shell=True)
                 conn = get_db_connection_books()
                 conn.execute('INSERT INTO books (title, author, cover_path) VALUES (?, ?, ?)', 
                 (book_title, author, filepath))
